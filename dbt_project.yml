@@ -34,6 +34,15 @@ models:
   airbnb_dbt:
     +materialized: view
     dim:
+      +schema: dw
       +materialized: table
+    fact:
+      +schema: dw
+    mart:
+      +schema: mart
     src:
       +materialized: ephemeral
+seeds:
+  +schema: stg
+snapshots:
+  +target_schema: dw

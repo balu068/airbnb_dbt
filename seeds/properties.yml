@@ -1,0 +1,11 @@
+version: 2
+
+seeds:
+  - name: raw_listings
+    config:
+      column_types:
+        id: bigint
+  - name: raw_revies
+    config:
+      column_types:
+        listing_id: bigint
